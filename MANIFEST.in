@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include probase_erp *.css
+recursive-include probase_erp *.csv
+recursive-include probase_erp *.html
+recursive-include probase_erp *.ico
+recursive-include probase_erp *.js
+recursive-include probase_erp *.json
+recursive-include probase_erp *.md
+recursive-include probase_erp *.png
+recursive-include probase_erp *.py
+recursive-include probase_erp *.svg
+recursive-include probase_erp *.txt
+recursive-exclude probase_erp *.pyc
