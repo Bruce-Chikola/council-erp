@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Booth-Charge-{#####}",
+ "creation": "2022-04-26 11:43:03.167193",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "booth_loc",
+  "booth_charge"
+ ],
+ "fields": [
+  {
+   "fieldname": "booth_loc",
+   "fieldtype": "Data",
+   "label": "Booth location"
+  },
+  {
+   "fieldname": "booth_charge",
+   "fieldtype": "Currency",
+   "label": "Booth Charge"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Holder",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-26 16:47:04.909769",
+ "modified_by": "Administrator",
+ "module": "billing",
+ "name": "Booth Fee Charges",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Waste-management-{#######}",
+ "creation": "2022-04-21 09:55:19.977863",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "province",
+  "charge"
+ ],
+ "fields": [
+  {
+   "fieldname": "province",
+   "fieldtype": "Data",
+   "label": "Province"
+  },
+  {
+   "fieldname": "charge",
+   "fieldtype": "Currency",
+   "label": "Waste Charge"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-25 22:49:09.888476",
+ "modified_by": "Administrator",
+ "module": "billing",
+ "name": "Waste Management",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

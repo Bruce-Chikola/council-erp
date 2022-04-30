@@ -1,0 +1,343 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:Property-{#######}",
+ "creation": "2021-11-20 15:20:55.576160",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "more_details_column",
+  "customer",
+  "customer_column_break_column",
+  "customer_name",
+  "section_break_section",
+  "property_category",
+  "property_account_no",
+  "property_description",
+  "column_break_9",
+  "location",
+  "plot_number",
+  "street",
+  "columd_break",
+  "area_description",
+  "amended_from",
+  "area_code",
+  "valuation_details_section",
+  "surface_area",
+  "land_value",
+  "column_break_18",
+  "improvement_value",
+  "charge",
+  "bills_section",
+  "property_setup_section",
+  "is_active",
+  "column_break_26",
+  "is_rate_exempted",
+  "column_break_28",
+  "is_rentals_exempted",
+  "rentals_details_section",
+  "is_on_rent_or_lease",
+  "is_occupied",
+  "column_break_31",
+  "monthly_rent_amount",
+  "last_payment_date",
+  "last_billing_date",
+  "occupant_name",
+  "column_break_33",
+  "rental_balance",
+  "last_payment_amount",
+  "last_billing_amount",
+  "more_info_section",
+  "document_and_image_attachments",
+  "has_bill"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_account_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Account No",
+   "mandatory_depends_on": "alert(\"Hellp World\")",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "default": "22322",
+   "fieldname": "plot_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plot Number ",
+   "reqd": 1
+  },
+  {
+   "default": "Testing",
+   "fieldname": "property_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Description ",
+   "reqd": 1
+  },
+  {
+   "default": "Testing",
+   "fieldname": "street",
+   "fieldtype": "Data",
+   "label": "Street ",
+   "reqd": 1
+  },
+  {
+   "default": "Lusaka",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "default": "Testing",
+   "fieldname": "area_code",
+   "fieldtype": "Data",
+   "label": "Area Code",
+   "reqd": 1
+  },
+  {
+   "default": "Testing",
+   "fieldname": "area_description",
+   "fieldtype": "Data",
+   "label": "Area Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_section",
+   "fieldtype": "Section Break",
+   "label": "Property Details"
+  },
+  {
+   "fieldname": "more_details_column",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "columd_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bills_section",
+   "fieldtype": "Section Break",
+   "label": "Bills"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_column_break_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "improvement_value",
+   "fieldtype": "Float",
+   "label": "Improvement Value"
+  },
+  {
+   "fieldname": "land_value",
+   "fieldtype": "Currency",
+   "label": "Land Value"
+  },
+  {
+   "default": "2323",
+   "fieldname": "surface_area",
+   "fieldtype": "Float",
+   "label": "Surface Area"
+  },
+  {
+   "fieldname": "valuation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation Details"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_category",
+   "fieldtype": "Link",
+   "label": "Property Category",
+   "options": "Property Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_setup_section",
+   "fieldtype": "Section Break",
+   "label": "Property Setup "
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active?"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rate_exempted",
+   "fieldtype": "Check",
+   "label": "Is Rate Exempted?"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_rentals_exempted",
+   "fieldtype": "Check",
+   "label": "Is Rentals Exempted?"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charge",
+   "fieldtype": "Currency",
+   "label": "Property Charge"
+  },
+  {
+   "fieldname": "document_and_image_attachments",
+   "fieldtype": "Table",
+   "label": "Document And Image Attachments",
+   "options": "Property Attachments"
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "rentals_details_section",
+   "fieldtype": "Section Break",
+   "label": "Rentals Details"
+  },
+  {
+   "fieldname": "last_payment_date",
+   "fieldtype": "Date",
+   "label": "Last Payment Date "
+  },
+  {
+   "fieldname": "last_billing_date",
+   "fieldtype": "Date",
+   "label": "Last Billing Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_on_rent_or_lease",
+   "fieldtype": "Check",
+   "label": "Is On Rent or Lease"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_occupied",
+   "fieldtype": "Check",
+   "label": "Is Occupied?"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_rent_amount",
+   "fieldtype": "Currency",
+   "label": "Monthly Rent Amount"
+  },
+  {
+   "fieldname": "rental_balance",
+   "fieldtype": "Currency",
+   "label": "Rental Balance"
+  },
+  {
+   "fieldname": "last_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Last Payment AMount"
+  },
+  {
+   "fieldname": "last_billing_amount",
+   "fieldtype": "Currency",
+   "label": "Last Billing Amount"
+  },
+  {
+   "fieldname": "occupant_name",
+   "fieldtype": "Link",
+   "label": "Occupant ",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_bill",
+   "fieldtype": "Check",
+   "label": "Has Bill"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-04-25 22:23:23.516657",
+ "modified_by": "Administrator",
+ "module": "Probase Erp",
+ "name": "Property",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "route": "properties",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

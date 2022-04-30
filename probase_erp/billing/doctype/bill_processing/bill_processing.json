@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{bill_type}-{billing_period}",
+ "creation": "2022-04-14 16:27:42.142442",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "billing_profile",
+  "frequency",
+  "bill_type",
+  "column_break_2",
+  "billing_period",
+  "column_break_6",
+  "section_break_7",
+  "status",
+  "successful",
+  "failed",
+  "total",
+  "bill_reference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Unprocessed",
+   "fieldname": "status",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Status"
+  },
+  {
+   "default": "Successful",
+   "fieldname": "successful",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Successful"
+  },
+  {
+   "default": "Failed",
+   "fieldname": "failed",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Failed"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Total"
+  },
+  {
+   "fieldname": "bill_reference",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Bill Reference",
+   "options": "Bills"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "billing_profile",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Billing Profile ",
+   "options": "Billing Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bill Processing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "billing_profile.frequency",
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "billing_profile.type",
+   "fieldname": "bill_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bill Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_period",
+   "fieldtype": "Link",
+   "label": "Billing Period",
+   "options": "Billing Period"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-04-25 09:26:15.369497",
+ "modified_by": "Administrator",
+ "module": "billing",
+ "name": "Bill Processing",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

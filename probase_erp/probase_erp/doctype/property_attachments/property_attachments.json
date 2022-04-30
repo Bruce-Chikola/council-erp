@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-04-14 10:28:38.026475",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "doc_title",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "doc_title",
+   "fieldtype": "Data",
+   "label": "Document title"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Doc",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-04-14 10:28:38.026475",
+ "modified_by": "Administrator",
+ "module": "Probase Erp",
+ "name": "Property Attachments",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -96,6 +96,7 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
+
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
@@ -104,13 +105,16 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+    # "Payment Entry": {
+    #     "on_submit": ["probase_erp.probase_erp.overrides.on_save"]
+    # },
+
+    "Payment Entry": {
+        "on_submit": ["probase_erp.billing.overrides.on_payment"]
+    }
+
+}
 
 # Scheduled Tasks
 # ---------------
